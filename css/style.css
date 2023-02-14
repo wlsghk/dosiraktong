@@ -30,7 +30,7 @@ body {
     letter-spacing: 0;
     word-break: keep-all;
 }
-/* 공통 요소 */
+/* 공통 요소 : 2번 이상 재활용 코드 */
 .inner {
     position: relative;
     display: block;
@@ -93,10 +93,41 @@ body {
 .gnb {
     display: flex;
     height: 100%;
+    /* 세로 중앙 정렬 */
     align-items: center;
 }
+/* 주의사항! 서브 메뉴가 있다면 .gnb > li */
 .gnb li {
 
+}
+.gnb > li > a {
+    display: block;
+    font-size: 17px;
+    /* font-weight: 400이 기본 */
+    font-weight: 500;
+    color: #fff;
+    /* 왜 padding을 쓰는가? a 태그 영역 확대 */
+    padding: 40px 38px;
+}
+.gnb > li > a > span {
+    position: relative;
+    display: block;
+    padding-bottom: 7px;
+}
+.gnb > li > a > span::after {
+    /* 내용의 끝자리를 after이라고 함 */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.5s;
+}
+.gnb > li > a:hover > span::after {
+    width: 100%;
 }
 /* 스크롤 시 css 적용 */
 .header.active {
@@ -107,6 +138,11 @@ body {
     top: 25px;
     background: url("../images/logo.png") no-repeat center;
     background-size: cover;
+}
+/* 1. 숫자가 증가하는 형태는 모바일 작업 > 태블릿 > 데스크 */
+/* 2. 숫자가 감소하는 형태는 데스크 작업 > 태블릿 > 모바일 */
+@media screen and (max-width: 1280px) {
+
 }
 /* 비주얼 */
 .visual {
