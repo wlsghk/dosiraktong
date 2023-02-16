@@ -108,7 +108,7 @@ window.onload = function () {
       // console.log(req.response);
       // 아래 구문을 반드시 체크하자
       const dataArr = JSON.parse(req.response);
-      console.log(dataArr);
+      //console.log(dataArr);
     }
   };
   xhttp.open("GET", "data.json");
@@ -154,7 +154,7 @@ window.onload = function () {
   let swList;
   // 타이틀 내용 보여 주기
   function showVT(_data, _idx) {
-    console.log(_data);
+    // console.log(_data);
     swTitle.innerHTML = _data.title;
     swTxt.innerHTML = _data.txt;
     if (_data.link === "no") {
@@ -206,8 +206,8 @@ window.onload = function () {
   });
   // swVisual 슬라이드가 변경될 때마다 하고 싶은 일 진행
   swVisual.on("slideChange", function () {
-    console.log("진짜 html 태그의 순서", swVisual.realIndex);
-    console.log("모션이 되는 순서", swVisual.activeIndex);
+    // console.log("진짜 html 태그의 순서", swVisual.realIndex);
+    // console.log("모션이 되는 순서", swVisual.activeIndex);
     // 텍스트를 수정한다
     showVT(visualData[swVisual.realIndex], swVisual.realIndex);
   });
@@ -223,5 +223,11 @@ window.onload = function () {
         slidesPerView: 3,
       },
     },
+  });
+
+  // 안내창 기능
+  let categoryPop = document.querySelector(".category-pop");
+  categoryPop.addEventListener("click", function () {
+    categoryPop.classList.add("active");
   });
 };

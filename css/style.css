@@ -762,8 +762,35 @@ html.active {
     background: yellow;
 }
 
+.category-pop {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+
+.category-pop.active {
+    display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .category-pop {
+        display: flex;
+    }
+}
+
 /* 하단 */
 .footer {
     position: relative;
     display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    color: #666;
 }
