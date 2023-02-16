@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>도시락으로 다 통한다, 해외 데이터는 도시락통</title>
-    <!-- SEO 세팅 (검색 엔진 최적화) -->
+    <!-- SEO 셋팅 -->
     <meta name="title" content="도시락으로 다 통한다, 해외데이터는 도시락통" />
     <meta
       name="keywords"
@@ -46,13 +46,14 @@
       name="twitter:description"
       content="도시락으로 다 통한다, 해외 데이터는 도시락통! 와이파이도시락, 도시락유심, 도시락eSIM을모두 담은 도시락통"
     />
+    <meta name="format-detection" content="telephone=no" />
     <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- xeicon -->
+    <!-- xeiocn -->
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
@@ -72,17 +73,16 @@
     <!-- 사용자 스크립트 -->
     <script src="js/script.js"></script>
   </head>
+
   <body>
     <!-- 메인 레이아웃 용도 : 관례 -->
     <div class="wrap">
-      <!-- 상단 -->
+      <!-- 상단  -->
       <header class="header">
-        <!-- 데스크탑 -->
+        <!-- 데스크탑  -->
         <div class="inner">
           <!-- 로고는 a 태그로 마무리 -->
-          <a href="index.html" class="logo">
-            <!-- img 태그로 배치할 수도 있다 -->
-          </a>
+          <a href="index.html" class="logo"></a>
           <!-- caniuse.com 검색 -->
           <nav class="nav">
             <ul class="gnb">
@@ -106,7 +106,9 @@
               </li>
             </ul>
             <button class="mb-bt">
-              <span></span><span></span><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </nav>
         </div>
@@ -134,18 +136,19 @@
           </ul>
         </nav>
       </header>
-      <!-- // 상단 -->
+      <!--// 상단  -->
       <!-- 비주얼 -->
       <section class="visual">
-        <div class="inner"></div>
         <!-- 
-          Swiper
-        <div class="swiper 사용자지정클래스"></div>
-        swiper : 클래스는 Swiper 기본형 제어 css
-        사용자지정클래스(swvisual) : js 및 css 추가
-        -->
+                Swiper  
+                <div class="swiper 사용자지정클래스"></div>
+                swiper : 클래스는 Swiper 기본형 제어 css
+                사용자지정클래스(swvisual) : js 및 css 추가
+            -->
         <div class="swiper swvisual">
+          <!-- swiper-wrapper 클래스명 절대 변경 및 css 작업 금지 -->
           <div class="swiper-wrapper">
+            <!-- swiper-slide 클래스명 절대 변경 및 css 작업 금지 -->
             <div class="swiper-slide">
               <div class="visual-img bg-1"></div>
             </div>
@@ -159,11 +162,12 @@
               <div class="visual-img bg-4"></div>
             </div>
           </div>
-          <!-- 슬라이드의 컨드롤러 -->
+
+          <!-- 슬라이드의 콘트롤러 -->
           <div class="swvisual-control">
-            <!-- margin: 0 auto; 중간 정렬 -->
+            <!-- margin: 0 auto; 중앙에 배치 -->
             <div class="inner">
-              <!-- 좌측/우측 이동 버튼 -->
+              <!-- 좌측/우측 이동버튼 -->
               <button class="swvisual-prev">
                 <i class="xi-angle-left"></i>
               </button>
@@ -182,34 +186,67 @@
               <!-- 네비게이션 -->
               <div class="swvisual-navi">
                 <ul class="swvisual-list">
-                  <!-- js 코드 연동 -->
+                  <!-- js 코드 html 삽입 -->
+                  <!-- <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li> -->
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- // 비주얼 -->
+      <!--// 비주얼 -->
       <!-- 서비스 -->
       <section class="service">
-        <div class="inner"></div>
+        <div class="inner">
+          <h2><span>도시락통</span> 서비스 둘러보기</h2>
+          <div class="service-contents">
+            <div class="service-left">
+              <a href="#" class="service-link-1">왼쪽</a>
+            </div>
+            <div class="service-right">
+              <a href="#" class="service-link-2">상단</a>
+              <a href="#" class="service-link-3">하단</a>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- // 서비스 -->
+      <!--// 서비스 -->
       <!-- 정보 -->
       <section class="info">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="info-contents">
+            <div class="info-left"></div>
+            <div class="info-right"></div>
+          </div>
+        </div>
       </section>
-      <!-- // 정보 -->
+      <!--// 정보 -->
       <!-- 서비스 카테고리 -->
       <section class="category">
-        <div class="inner"></div>
+        <!-- Swiper -->
+        <div class="swiper swcategory">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="category-link clink-1">내용</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="category-link clink-2">내용</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="category-link clink-3">내용</a>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- // 서비스 카테고리 -->
+      <!--// 서비스메뉴 -->
       <!-- 하단 -->
       <footer class="footer">
         <div class="inner"></div>
       </footer>
-      <!-- // 하단 -->
+      <!--// 하단 -->
     </div>
   </body>
 </html>

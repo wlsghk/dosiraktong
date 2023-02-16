@@ -35,8 +35,6 @@ body {
     line-height: 1;
     letter-spacing: 0;
     word-break: keep-all;
-
-    height: 5000px;
 }
 
 html.active {
@@ -53,6 +51,7 @@ html.active {
     width: 100%;
     /* block 요소 가운데 정렬 */
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 /* 레이아웃 */
@@ -320,33 +319,40 @@ html.active {
     display: block;
     width: 100%;
     height: 100vh;
+    transition: height 0.5s;
 }
+
 .swvisual {
     width: 100%;
     height: 100%;
 }
-/* 기본/공통 slide 내용 css */
+
+/* 기본 및 공통 slide 내용 css */
 .visual-img {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
+
 /* 상세 slide 내용 css */
 .bg-1 {
-    background: url('../images/main_visual_1.jpg') no-repeat center;
+    background: url("../images/main_visual_1.jpg") no-repeat center;
     background-size: cover;
 }
+
 .bg-2 {
-    background: url('../images/main_visual_2.jpg') no-repeat center;
+    background: url("../images/main_visual_2.jpg") no-repeat center;
     background-size: cover;
 }
+
 .bg-3 {
-    background: url('../images/main_visual_3.jpg') no-repeat center;
+    background: url("../images/main_visual_3.jpg") no-repeat center;
     background-size: cover;
 }
+
 .bg-4 {
-    background: url('../images/main_visual_4.jpg') no-repeat center;
+    background: url("../images/main_visual_4.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -360,11 +366,13 @@ html.active {
     height: 100%;
     z-index: 999;
 }
+
 .swvisual-prev {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+
     width: 60px;
     height: 60px;
     border: none;
@@ -374,17 +382,21 @@ html.active {
     color: #fff;
     font-size: 24px;
 }
+
 .swvisual-prev i {
     opacity: 0.5;
     transition: opacity 0.3s;
 }
+
 .swvisual-prev:hover i {
     opacity: 1;
 }
+
 .swvisual-next {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+
     width: 60px;
     height: 60px;
     border: none;
@@ -394,27 +406,32 @@ html.active {
     color: #fff;
     font-size: 24px;
 }
+
 .swvisual-next i {
     opacity: 0.5;
     transition: opacity 0.3s;
 }
+
 .swvisual-next:hover i {
     opacity: 1;
 }
+
 .swvisual-title {
     margin: 20px 0 12px;
-    font-family: "Godo","Notokr";
+    font-family: "Godo", "Notokr";
     font-size: 74px;
     color: #fff;
     line-height: 1.3;
 }
+
 .swvisual-txt {
-    opacity: .9;
+    opacity: 0.9;
     margin-top: 10px;
     font-size: 22px;
     font-weight: 500;
     color: #fff;
 }
+
 .swvisual-link {
     display: flex;
     justify-content: center;
@@ -425,6 +442,7 @@ html.active {
     margin-top: 30px;
     font-size: 16px;
 }
+
 .swvisual-link a {
     display: flex;
     justify-content: space-around;
@@ -434,15 +452,19 @@ html.active {
     border: 1px solid #fff;
     color: #fff;
 }
+
 .swvisual-link.active a {
     display: none;
 }
+
 .swvisual-navi {
     margin-top: 90px;
 }
+
 .swvisual-list {
     display: flex;
 }
+
 .swvisual-list li {
     position: relative;
     display: block;
@@ -453,6 +475,7 @@ html.active {
     cursor: pointer;
     transition: color 0.3s;
 }
+
 .swvisual-list li::before {
     content: "";
     position: absolute;
@@ -462,6 +485,7 @@ html.active {
     height: 2px;
     background: rgba(255, 255, 255, 0.3);
 }
+
 .swvisual-list li::after {
     content: "";
     position: absolute;
@@ -475,15 +499,181 @@ html.active {
 .swvisual-list li.active {
     color: rgba(255, 255, 255, 1);
 }
+
 .swvisual-list li.active::after {
     width: 100%;
-    transition: width 2s;
+    transition: width 2.5s;
+}
+
+/* 비주얼 반응형 */
+@media screen and (max-width: 1280px) {
+    /* 비주얼 안쪽의 내용 부분 사이즈 조절 */
+}
+
+@media screen and (max-width: 1024px) {
+    .visual {
+        /* 100vw : 1920px */
+        /* 48.95vw : 940px */
+        min-height: 800px;
+        height: 48.95vw;
+    }
+
+    /* 비주얼 안쪽의 내용 부분 사이즈 조절 */
+}
+
+@media screen and (max-width: 60px) {
+    /* 비주얼 안쪽의 내용 부분 사이즈 조절 */
 }
 
 /* 서비스 */
 .service {
     position: relative;
     display: block;
+    height: 100vh;
+}
+
+.service .inner {
+    height: 100%;
+    padding: 180px 30px;
+}
+
+.service h2 {
+    text-align: center;
+    /* 글자 셋팅 */
+}
+
+.service h2 span {
+    /* 글자색만 수정 */
+}
+
+.service-contents {
+    display: flex;
+    justify-content: space-between;
+    height: 680px;
+}
+
+.service-left {
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.service-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.service-link-1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/main_service_img1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.service-link-2 {
+    display: block;
+    width: 100%;
+    height: calc(50% - 10px);
+    background: url("../images/main_service_img2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.service-link-3 {
+    display: block;
+    width: 100%;
+    height: calc(50% - 10px);
+    background: url("../images/main_service_img3.jpg") no-repeat center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1460px) {
+    .service-contents {
+        /* 
+      왜 1920px 이 아니고       
+      1460 이 되냐면??????      
+      1560px 일때 680 px 부터 ****
+      1510px 일때 680 px 부터 ****
+      1500px 일때 680 px 부터 ****
+      1460px 일때 680 px 부터 ****
+      높이가 줄어들기 때문입니다.
+
+      (1460px / 680px) * 100 = 46.57vw
+    */
+        height: 46.57vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .service {
+        height: auto;
+    }
+
+    .service-contents {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .service-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .service-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-link-1 {
+        max-width: 660px;
+
+        /* 1024px : 660px = 64.45vw */
+        width: 64.45vw;
+
+        /* 1024px : 640px = 64.45vw */
+        height: 62.5vw;
+
+        /* flex 를 적용안했으므로 */
+        margin: 0 auto;
+    }
+
+    .service-link-2 {
+        max-width: 660px;
+        /* 1024px : 660px = 64.45vw */
+        width: 64.45vw;
+
+        /* 1024px : 310px = 30vw */
+        height: 30vw;
+        margin-bottom: 20px;
+    }
+
+    .service-link-3 {
+        max-width: 660px;
+        /* 1024px : 660px = 64.45vw */
+        width: 64.45vw;
+
+        /* 1024px : 310px = 30vw */
+        height: 30vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .service-link-1 {
+        width: 100%;
+        height: 275px;
+    }
+
+    .service-link-2 {
+        width: 100%;
+        height: 275px;
+    }
+
+    .service-link-3 {
+        width: 100%;
+        height: 275px;
+    }
 }
 
 /* 정보 */
@@ -492,10 +682,84 @@ html.active {
     display: block;
 }
 
+.info .inner {
+    padding: 180px 30px;
+}
+
+.info-contents {
+    display: flex;
+    justify-content: space-between;
+    height: 430px;
+    width: 100%;
+    background: skyblue;
+}
+
+.info-left {
+    width: calc(50% - 10px);
+    height: 100%;
+    background: yellow;
+}
+
+.info-right {
+    width: calc(50% - 10px);
+    height: 100%;
+    background: green;
+}
+
+/* info 반응형 */
+@media screen and (max-width: 1280px) {
+    .info-contents {
+        height: 383px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .info-contents {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .info-left {
+        width: 100%;
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .info-right {
+        width: 100%;
+        height: auto;
+        padding: 50px 0;
+    }
+}
+
 /* 서비스 카테고리 */
 .category {
     position: relative;
     display: block;
+    height: 400px;
+}
+
+.swcategory {
+    height: 100%;
+}
+
+.category-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.clink-1 {
+    background: hotpink;
+}
+
+.clink-2 {
+    background: yellowgreen;
+}
+
+.clink-3 {
+    background: yellow;
 }
 
 /* 하단 */

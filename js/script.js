@@ -211,4 +211,17 @@ window.onload = function () {
     // 텍스트를 수정한다
     showVT(visualData[swVisual.realIndex], swVisual.realIndex);
   });
+  // 카테고리 슬라이드
+  new Swiper(".swcategory", {
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
 };
