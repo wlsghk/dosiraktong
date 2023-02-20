@@ -946,6 +946,12 @@ html.active {
     word-break: keep-all;
 }
 
+.info-right-txt-bottom {
+    margin-bottom: 25px;
+    line-height: 1.5em;
+    word-break: keep-all;
+}
+
 .info-right-link {
     display: flex;
     align-items: center;

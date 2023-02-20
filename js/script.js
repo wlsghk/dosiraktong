@@ -253,6 +253,16 @@ window.onload = function () {
     categoryPop.classList.add("active");
   });
 
+  // info 사이즈별 텍스트 변화
+  let infoRightTxt = document.querySelector(".info-right-txt-bottom");
+  window.addEventListener("resize", function () {
+    if (window.innerWidth <= 1024) {
+      infoRightTxt.innerHTML = `
+      더 나은 서비스 제공을 위해 지속적으로 연구, 개발하여 앞으로도 편리하고 즐거운 여행의 파트너가 되겠습니다.
+      `;
+    }
+  });
+
   // 640 size에서 footer 텍스트 변화
   let footerService = document.querySelector(".footer-service");
   window.addEventListener("resize", function () {
