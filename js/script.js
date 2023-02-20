@@ -1,5 +1,27 @@
 // 이미지 및 리소스 로드 후 코드실행
 window.onload = function () {
+  // AOS 세팅
+  AOS.init();
+  // Waypoint 활용
+  let goTop = document.querySelector(".gotop");
+
+  // 스크롤의 위치에 따른 div 비교 대상
+  let visual = document.querySelector(".service");
+  new Waypoint({
+    element: visual,
+    handler: function (dir) {
+      // console.log(dir);
+      // dir 의 값에 따라 처리
+      if (dir === "down") {
+        goTop.classList.add("active");
+      } else {
+        goTop.classList.remove("active");
+      }
+    },
+    // 해당 div의 화면상에 얼마나 보이는가?
+    offset: "50%",
+  });
+
   let htmlTag = document.querySelector("html");
   // 모바일 메뉴 버튼 처리
   // 1. 모바일 버튼을 찾아서 저장한다.
