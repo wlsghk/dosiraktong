@@ -252,4 +252,16 @@ window.onload = function () {
   categoryPop.addEventListener("click", function () {
     categoryPop.classList.add("active");
   });
+
+  // 640 size에서 footer 텍스트 변화
+  let footerService = document.querySelector(".footer-service");
+  window.addEventListener("resize", function () {
+    if (window.innerWidth <= 640) {
+      footerService.innerHTML = `
+      고객센터 : 1566-9070<br />(운영시간 9:00~18:00, <br />주말/공휴일/점심 12:00~13:00 제외)
+      `;
+    } else {
+      footerService.textContent = `고객센터 : 1566-9070 (운영시간 9:00~18:00, 주말/공휴일/점심 12:00~13:00 제외)`;
+    }
+  });
 };
