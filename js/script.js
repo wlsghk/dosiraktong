@@ -2,6 +2,13 @@
 window.onload = function () {
   // AOS 세팅
   AOS.init();
+
+  // 경고 모달창
+  Swal.fire(
+    "도시락통 클론코딩",
+    "본 사이트는 교육용으로 제작하였으며 리소스는 원저작자에게 있습니다. 문제 시 즉시 삭제하겠습니다."
+  );
+
   // Waypoint 활용
   let goTop = document.querySelector(".gotop");
 
