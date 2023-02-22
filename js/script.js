@@ -165,7 +165,13 @@ window.onload = function () {
       // li 태그를 클릭해서 슬라이드 이동하기
       swListShow();
 
-      showVT(visualData[0], 0);
+      setTimeout(function () {
+        showVT(visualData[0], 0);
+      }, 20);
+
+      setTimeout(function () {
+        initSwiper();
+      }, 2000);
     })
     .catch((err) => {
       console.log(err);
