@@ -55,7 +55,10 @@ window.onload = function () {
     // 모바일 메뉴에 active 클래스를 추가한다.
     mbNav.classList.toggle("active");
     mbBtSpan.forEach((item) => {
-      item.classList.add("active");
+      item.classList.toggle(
+        "active",
+        header.classList.contains("active") || mbBt.classList.contains("active")
+      );
     });
   });
   // 화면 리사이징 처리
